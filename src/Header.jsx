@@ -11,7 +11,8 @@ function App() {
 
   return (
       <header className="sticky top-0 flex justify-between items-center text-black py-6 px-8 md:px-32 bg-white drop-shadow-md z-50">
-        <Link to="/" className='w-52 font-bold hover:scale-105 transition-all'>
+        <Link to="/" className="flex items-center gap-1 w-52 font-bold hover:scale-105 transition-all">
+        <img src="/logo.svg" alt="Logo" className="h-10" />
         My Health Plan
       </Link>
         <ul className='hidden xl:flex items-center gap-12 font-semibold text-base'>
