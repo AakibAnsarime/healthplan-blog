@@ -19,10 +19,10 @@ function App() {
           <Link to="/">Home</Link>
         </li>
         <li className='p-3 hover:bg-sky-400 hover:text-white rounded-md transition-all cursor-pointer'>
-          <Link to="/category/Workout Routines">Workout Routines</Link>
+          <Link to="/category/Health">Health</Link>
         </li>
         <li className='p-3 hover:bg-sky-400 hover:text-white rounded-md transition-all cursor-pointer'>
-          <Link to="/category/Healthy Recipes">Healthy Recipes</Link>
+          <Link to="/category/Fitness">Fitness</Link>
         </li>
       </ul>
         <div className="relative hidden xl:flex items-center justify-center gap-3">
@@ -41,10 +41,13 @@ function App() {
         </div>
         <i onClick={() => setIsMenuOpen(!isMenuOpen)} className='bx bx-menu xl:hidden block text-5xl cursor-pointer'><FaBars /></i>
         <div className={`absolute xl:hidden top-24 left-0 w-full bg-white flex flex-col items-center gap-6 font-semibold text-lg transform transition-transform ${isMenuOpen ? "opacity-100" : "opacity-0"}`}>
-          <li className='list-none w-full text-center p-4 hover:bg-sky-400 hover:text-white transition-all cursor-pointer'>Home</li>
-          <li className='list-none w-full text-center p-4 hover:bg-sky-400 hover:text-white transition-all cursor-pointer'>About</li>
-          <li className='list-none w-full text-center p-4 hover:bg-sky-400 hover:text-white transition-all cursor-pointer'>Posts</li>
-          <li className='list-none w-full text-center p-4 hover:bg-sky-400 hover:text-white transition-all cursor-pointer'>Contact</li>
+          <li className='list-none w-full text-center p-4 hover:bg-sky-400 hover:text-white transition-all cursor-pointer'>
+          <Link to="/">Home</Link>
+          </li>
+          <li className='list-none w-full text-center p-4 hover:bg-sky-400 hover:text-white transition-all cursor-pointer'>
+          <Link to="/category/Health">Health</Link>
+          </li>
+          <li className='list-none w-full text-center p-4 hover:bg-sky-400 hover:text-white transition-all cursor-pointer'><Link to="/category/Fitness">Fitness</Link></li>
         </div>
       </header>
   )
