@@ -11,6 +11,8 @@ import PostPage from './PostPage';
 import Footer from './Footer';
 import AboutUs from './AboutUs';
 import ContactUs from './ContactUs';
+import TermsAndConditions from './TermsAndConditions';
+import PrivacyPolicy from './PrivacyPolicy';
 
 const App = () => {
   return (
@@ -59,6 +61,8 @@ const App = () => {
           <Route path="/add-post" element={<AddPost />} />
           <Route path="/about-us" element={<AboutUs />} />
           <Route path="/contact-us" element={<ContactUs />} />
+          <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         </Routes>
         <Footer />
       </div>

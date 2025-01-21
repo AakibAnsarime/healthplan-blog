@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react'; 
 import { useParams } from 'react-router-dom';
 import AuthorSection from './AuthorSection';
 import { LoadingScreen } from './LoadingScreen';
@@ -29,14 +29,14 @@ const PostPage = () => {
 
   if (loading) {
     return (
-      <div className="container mx-auto px-8 py-8 h-screen">
+      <div className="container mx-auto px-8 py-8 h-screen flex justify-center items-center">
         <LoadingScreen />
       </div>
     );
   }
 
   if (!post) {
-    return <div className="container mx-auto px-8 py-8">Post not found</div>;
+    return <div className="container mx-auto px-8 py-8 text-center">Post not found</div>;
   }
 
   const author = {
@@ -55,16 +55,34 @@ const PostPage = () => {
             className="absolute inset-0 w-full h-full object-cover"
           />
         </div>
-        <div className="p-6">
-          <h1 className="text-4xl font-bold mb-4">{post.heading}</h1>
-          <h2 className="text-2xl font-semibold mb-4">{post.headline}</h2>
-          <p className="text-gray-600 mb-4">By {author.name} on {new Date(post.date).toLocaleDateString()}</p>
-          
+        <div className="p-6 text-center">
+          <h1 className="text-5xl font-bold mb-6 text-gray-800">{post.heading}</h1>
+          <h2 className="text-xl mb-6 text-gray-700">{post.headline}</h2>
+          <p className="text-gray-600 mb-8 text-lg">
+            By <span className="font-semibold text-gray-800">{author.name}</span> on{' '}
+            <span className="italic">{new Date(post.date).toLocaleDateString()}</span>
+          </p>
+
           {post.sections && post.sections.map((section, index) => (
-            <div key={index} className="mb-8">
-              <h3 className="text-2xl font-bold mb-2">{section.subheading}</h3>
-              <p className="text-gray-800 mb-4">{section.text}</p>
-              {section.image && <img src={section.image} alt={`Section image ${index + 1}`} className="w-full h-48 object-cover mb-4" />}
+            <div
+              key={index}
+              className="mb-12 p-6 bg-green-100 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200"
+            >
+              <h3 className="text-2xl font-bold mb-4 text-gray-800">{section.subheading}</h3>
+              <p className="text-gray-700 text-lg leading-relaxed">
+                {section.text.split('\n').map((line, i) => (
+                  <span key={i} className="block mb-2">
+                    {line}
+                  </span>
+                ))}
+              </p>
+              {section.image && (
+                <img
+                  src={section.image}
+                  alt={`Section image ${index + 1}`}
+                  className="mx-auto w-full max-w-2xl h-auto object-cover mt-6 rounded-lg shadow-md"
+                />
+              )}
             </div>
           ))}
         </div>
