@@ -50,7 +50,7 @@ const PrivacyPolicy = () => {
           <p className="text-gray-700 leading-relaxed mb-6">
             You have the right to access, update, or delete your personal
             information. If you wish to exercise any of these rights, please
-            contact us at <a href="mailto:support@example.com" className="text-blue-600 underline">support@example.com</a>.
+            contact us at <a href="mailto:aakiba6619@gmail.com" className="text-blue-600 underline">aakiba6619@gmail.com</a>.
           </p>
 
           <h2 className="text-2xl font-semibold text-gray-800 mb-4">
@@ -67,7 +67,7 @@ const PrivacyPolicy = () => {
           </h2>
           <p className="text-gray-700 leading-relaxed">
             If you have any questions or concerns about this Privacy Policy,
-            feel free to contact us at <a href="mailto:support@example.com" className="text-blue-600 underline">support@example.com</a>.
+            feel free to contact us at <a href="mailto:aakiba6619@gmail.com" className="text-blue-600 underline">aakiba6619@gmail.com</a>.
           </p>
         </div>
       </div>
