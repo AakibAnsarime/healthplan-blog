@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Header from './Header';
 import Hero from './Hero';
+import AddPost from './AddPost';
 import ScrollingSection from './ScrollingSection';
 import BlogSection from './BlogSection';
 import CategoryPage from './CategoryPage';
@@ -52,7 +53,8 @@ const App = () => {
             </>
           } />
           <Route path="/category/:category" element={<CategoryPage />} />
-          <Route path="/post/:slug" element={<PostPage />} />
+          <Route path="/:slug" element={<PostPage />} />
+          <Route path="/add-post" element={<AddPost />} />
         </Routes>
         <Footer />
       </div>
