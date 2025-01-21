@@ -16,13 +16,16 @@ function App() {
       </Link>
         <ul className='hidden xl:flex items-center gap-12 font-semibold text-base'>
         <li className='p-3 hover:bg-sky-400 hover:text-white rounded-md transition-all cursor-pointer'>
-          <Link to="/">Home</Link>
-        </li>
-        <li className='p-3 hover:bg-sky-400 hover:text-white rounded-md transition-all cursor-pointer'>
           <Link to="/category/Health">Health</Link>
         </li>
         <li className='p-3 hover:bg-sky-400 hover:text-white rounded-md transition-all cursor-pointer'>
           <Link to="/category/Fitness">Fitness</Link>
+        </li>
+        <li className='p-3 hover:bg-sky-400 hover:text-white rounded-md transition-all cursor-pointer'>
+          <Link to="/about-us">About Us</Link>
+        </li>
+        <li className='p-3 hover:bg-sky-400 hover:text-white rounded-md transition-all cursor-pointer'>
+          <Link to="/contact-us">Contact Us</Link>
         </li>
       </ul>
         <div className="relative hidden xl:flex items-center justify-center gap-3">

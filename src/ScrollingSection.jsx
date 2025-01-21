@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaHeartbeat, FaLeaf, FaDumbbell, FaAppleAlt } from 'react-icons/fa'; // Replace with your preferred icons
 
 const ScrollingSection = () => {
   useEffect(() => {
@@ -10,27 +10,27 @@ const ScrollingSection = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  // Custom icons and text
   const icons = [
-    { icon: <FaFacebook className="text-4xl text-blue-600" />, text: "Follow us on Facebook" },
-    { icon: <FaTwitter className="text-4xl text-blue-400" />, text: "Follow us on Twitter" },
-    { icon: <FaInstagram className="text-4xl text-pink-600" />, text: "Follow us on Instagram" },
-    { icon: <FaLinkedin className="text-4xl text-blue-700" />, text: "Connect with us on LinkedIn" },
-    // Add more icons if needed
+    { icon: <FaHeartbeat className="text-4xl text-red-500" />, text: "Healthy Heart Tips" },
+    { icon: <FaLeaf className="text-4xl text-green-500" />, text: "Natural Remedies" },
+    { icon: <FaDumbbell className="text-4xl text-gray-700" />, text: "Fitness Guides" },
+    { icon: <FaAppleAlt className="text-4xl text-red-600" />, text: "Healthy Recipes" },
   ];
 
   return (
     <div className="w-full overflow-hidden bg-gray-100 py-8">
-      <div className="scrolling-content flex items-center space-x-8">
+      <div className="scrolling-content flex items-center space-x-8 animate-scroll">
         {icons.map((item, index) => (
           <div key={index} className="flex flex-col items-center">
             {item.icon}
-            <span className="text-xl font-semibold">{item.text}</span>
+            <span className="text-xl font-semibold mt-2">{item.text}</span>
           </div>
         ))}
         {icons.map((item, index) => (
           <div key={index + icons.length} className="flex flex-col items-center">
             {item.icon}
-            <span className="text-xl font-semibold">{item.text}</span>
+            <span className="text-xl font-semibold mt-2">{item.text}</span>
           </div>
         ))}
       </div>

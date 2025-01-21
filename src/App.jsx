@@ -9,6 +9,8 @@ import BlogSection from './BlogSection';
 import CategoryPage from './CategoryPage';
 import PostPage from './PostPage';
 import Footer from './Footer';
+import AboutUs from './AboutUs';
+import ContactUs from './ContactUs';
 
 const App = () => {
   return (
@@ -55,6 +57,8 @@ const App = () => {
           <Route path="/category/:category" element={<CategoryPage />} />
           <Route path="/:slug" element={<PostPage />} />
           <Route path="/add-post" element={<AddPost />} />
+          <Route path="/about-us" element={<AboutUs />} />
+          <Route path="/contact-us" element={<ContactUs />} />
         </Routes>
         <Footer />
       </div>
