@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { FaBars, FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from 'react-icons/fa';
+import { FaBars, FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 function App() {
@@ -30,17 +30,14 @@ function App() {
         </li>
       </ul>
         <div className="relative hidden xl:flex items-center justify-center gap-3">
-        <a href="#" className="text-2xl text-blue-500 hover:text-blue-700 transition-all">
+        <a href="https://www.facebook.com/people/My-health-plan/61565833672012/" className="text-2xl text-blue-500 hover:text-blue-700 transition-all">
             <FaFacebook />
           </a>
-          <a href="#" className="text-2xl text-blue-500 hover:text-blue-700 transition-all">
-            <FaTwitter />
+          <a href="https://www.youtube.com/@AakibAnsarime/" className="text-2xl text-blue-500 hover:text-blue-700 transition-all">
+            <FaYoutube />
           </a>
-          <a href="#" className="text-2xl text-pink-500 hover:text-pink-700 transition-all">
+          <a href="https://www.instagram.com/dailygta420/profilecard/?igsh=NTQzOGJxb2hhZmY2" className="text-2xl text-pink-500 hover:text-pink-700 transition-all">
             <FaInstagram />
-          </a>
-          <a href="#" className="text-2xl text-blue-500 hover:text-blue-700 transition-all">
-            <FaLinkedin />
           </a>
         </div>
         <i onClick={() => setIsMenuOpen(!isMenuOpen)} className='bx bx-menu xl:hidden block text-5xl cursor-pointer'><FaBars /></i>

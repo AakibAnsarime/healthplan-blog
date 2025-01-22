@@ -13,6 +13,7 @@ import AboutUs from './AboutUs';
 import ContactUs from './ContactUs';
 import TermsAndConditions from './TermsAndConditions';
 import PrivacyPolicy from './PrivacyPolicy';
+import { TestimonialSlider } from './TestimonialSlider';
 
 const App = () => {
   return (
@@ -54,6 +55,7 @@ const App = () => {
               <Hero />
               <ScrollingSection />
               <BlogSection />
+              <TestimonialSlider />
             </>
           } />
           <Route path="/category/:category" element={<CategoryPage />} />
