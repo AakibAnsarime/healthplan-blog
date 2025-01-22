@@ -17,16 +17,16 @@ function App() {
       </Link>
         <ul className='hidden xl:flex items-center gap-12 font-semibold text-base'>
         <li className='p-3 hover:bg-green-400 hover:text-white rounded-md transition-all cursor-pointer'>
-          <Link to="/category/Health">Health</Link>
+          <Link to="/category/Health/">Health</Link>
         </li>
         <li className='p-3 hover:bg-green-400 hover:text-white rounded-md transition-all cursor-pointer'>
-          <Link to="/category/Fitness">Fitness</Link>
+          <Link to="/category/Fitness/">Fitness</Link>
         </li>
         <li className='p-3 hover:bg-green-400 hover:text-white rounded-md transition-all cursor-pointer'>
-          <Link to="/about-us">About Us</Link>
+          <Link to="/about-us/">About Us</Link>
         </li>
         <li className='p-3 hover:bg-green-400 hover:text-white rounded-md transition-all cursor-pointer'>
-          <Link to="/contact-us">Contact Us</Link>
+          <Link to="/contact-us/">Contact Us</Link>
         </li>
       </ul>
         <div className="relative hidden xl:flex items-center justify-center gap-3">
@@ -43,16 +43,16 @@ function App() {
         <i onClick={() => setIsMenuOpen(!isMenuOpen)} className='bx bx-menu xl:hidden block text-5xl cursor-pointer'><FaBars /></i>
         <div className={`absolute xl:hidden top-24 left-0 w-full bg-white flex flex-col items-center gap-6 font-semibold text-lg transform transition-transform ${isMenuOpen ? "opacity-100" : "opacity-0"}`}>
           <li className='list-none w-full text-center p-4 hover:bg-green-400 hover:text-white transition-all cursor-pointer'>
-          <Link to="/category/Health">Health</Link>
+          <Link to="/category/Health/">Health</Link>
           </li>
           <li className='list-none w-full text-center p-4 hover:bg-green-400 hover:text-white transition-all cursor-pointer'>
-          <Link to="/category/Fitness">Fitness</Link>
+          <Link to="/category/Fitness/">Fitness</Link>
           </li>
           <li className='list-none w-full text-center p-4 hover:bg-green-400 hover:text-white transition-all cursor-pointer'>
-          <Link to="/about-us">About Us</Link>
+          <Link to="/about-us/">About Us</Link>
           </li>
           <li className='list-none w-full text-center p-4 hover:bg-green-400 hover:text-white transition-all cursor-pointer'>
-          <Link to="/contact-us">Contact Us</Link>
+          <Link to="/contact-us/">Contact Us</Link>
           </li>
         </div>
       </header>

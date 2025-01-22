@@ -58,13 +58,13 @@ const App = () => {
               <TestimonialSlider />
             </>
           } />
-          <Route path="/category/:category" element={<CategoryPage />} />
-          <Route path="/:slug" element={<PostPage />} />
-          <Route path="/add-post" element={<AddPost />} />
-          <Route path="/about-us" element={<AboutUs />} />
-          <Route path="/contact-us" element={<ContactUs />} />
-          <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
-          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/category/:category/" element={<CategoryPage />} />
+          <Route path="/:slug/" element={<PostPage />} />
+          <Route path="/add-post/" element={<AddPost />} />
+          <Route path="/about-us/" element={<AboutUs />} />
+          <Route path="/contact-us/" element={<ContactUs />} />
+          <Route path="/terms-and-conditions/" element={<TermsAndConditions />} />
+          <Route path="/privacy-policy/" element={<PrivacyPolicy />} />
         </Routes>
         <Footer />
       </div>

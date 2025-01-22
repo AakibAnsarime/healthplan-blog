@@ -34,7 +34,7 @@ const CategoryPage = () => {
       <h2 className="text-4xl font-bold mb-8">{category}</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         {currentArticles.map((article, index) => (
-          <Link to={`/${article.slug}`} key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
+          <Link to={`/${article.slug}/`} key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
             <img src={article.images[0]} alt={article.heading} className="w-full h-48 object-cover" />
             <div className="p-6">
               <h3 className="text-2xl font-bold mb-2">{article.heading}</h3>
