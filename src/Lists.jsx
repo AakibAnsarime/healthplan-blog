@@ -51,12 +51,12 @@ const Lists = () => {
       }
       setIsButtonDisabled(updatedDisabledState);
   
-      // Navigate to the subpage if it's the third button
+      // Navigate to subpage if it's the third button (index === 2)
       if (index === 2) {
         setHideOriginalButtons(true); // Hide original buttons after third click
-        setShowSubPage(true); // Show subpage
-        const subpageToNavigate = 'ldoe'; // Set your subpage here
-        navigate(`/lists/${subpageToNavigate}`); // Navigate to subpage route with valid subpage
+        setShowSubPage(true);
+        const subpageToNavigate = subpages[index]; // Dynamically select the subpage based on the index
+        navigate(`/lists/${subpageToNavigate}`); // Navigate to the selected subpage route
       }
     }, 1000); // Simulate a 1-second delay for "Waiting..." state
   };
@@ -72,7 +72,7 @@ const Lists = () => {
         {!hideOriginalButtons && (
           <>
             <button
-              onClick={() => handleClick(0, 'https://link1.com')}
+              onClick={() => handleClick(0, 'https://www.youtube.com/@ansarigamingindia?sub_confirmation=1')}
               className={`${
                 buttonState[0] === 'Completed' ? 'bg-green-200 text-black' : 'bg-yellow-300 text-black'
               } py-3 px-8 text-lg rounded-lg shadow-md hover:scale-105 transition-all duration-300 w-full flex items-center justify-between`}
@@ -84,7 +84,7 @@ const Lists = () => {
             </button>
 
             <button
-              onClick={() => handleClick(1, 'https://link2.com')}
+              onClick={() => handleClick(1, 'https://www.youtube.com/c/MintuAnsari?sub_confirmation=1')}
               className={`${
                 buttonState[1] === 'Completed' ? 'bg-green-200 text-black' : 'bg-yellow-300 text-black'
               } py-3 px-8 text-lg rounded-lg shadow-md hover:scale-105 transition-all duration-300 w-full flex items-center justify-between`}
@@ -114,7 +114,9 @@ const Lists = () => {
       {showSubPage && (
         <Routes>
           <Route path=":subpage" element={<SubPage />} />
-        </Routes>
+      </Routes>
+
+      
       )}
     </div>
   );
@@ -130,7 +132,7 @@ const SubPage = () => {
     fetch(`/links.json`)
       .then((response) => response.json())
       .then((data) => {
-        if (subpage in data) {
+                if (subpage in data) {
           setSubpageData(data[subpage]);
         }
       })
