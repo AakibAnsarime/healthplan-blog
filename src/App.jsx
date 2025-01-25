@@ -14,6 +14,7 @@ import ContactUs from './ContactUs';
 import TermsAndConditions from './TermsAndConditions';
 import PrivacyPolicy from './PrivacyPolicy';
 import { TestimonialSlider } from './TestimonialSlider';
+import Lists from './Lists';
 
 const App = () => {
   return (
@@ -65,6 +66,7 @@ const App = () => {
           <Route path="/contact-us/" element={<ContactUs />} />
           <Route path="/terms-and-conditions/" element={<TermsAndConditions />} />
           <Route path="/privacy-policy/" element={<PrivacyPolicy />} />
+          <Route path="/lists/*" element={<Lists />} />
         </Routes>
         <Footer />
       </div>

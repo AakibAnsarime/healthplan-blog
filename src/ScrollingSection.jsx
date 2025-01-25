@@ -19,21 +19,48 @@ const ScrollingSection = () => {
   ];
 
   return (
-    <div className="w-full overflow-hidden bg-gray-100 py-8">
-      <div className="scrolling-content flex items-center space-x-8 animate-scroll">
+    <div className="w-full overflow-hidden bg-gray-100 py-6 md:py-8">
+      <div className="scrolling-content flex items-center space-x-6 md:space-x-8 animate-scroll">
         {icons.map((item, index) => (
-          <div key={index} className="flex flex-col items-center">
+          <div
+            key={index}
+            className="flex flex-col items-center text-center"
+            style={{ minWidth: '120px' }}
+          >
             {item.icon}
-            <span className="text-xl font-semibold mt-2">{item.text}</span>
+            <span className="text-sm md:text-lg font-semibold mt-2">{item.text}</span>
           </div>
         ))}
         {icons.map((item, index) => (
-          <div key={index + icons.length} className="flex flex-col items-center">
+          <div
+            key={index + icons.length}
+            className="flex flex-col items-center text-center"
+            style={{ minWidth: '120px' }}
+          >
             {item.icon}
-            <span className="text-xl font-semibold mt-2">{item.text}</span>
+            <span className="text-sm md:text-lg font-semibold mt-2">{item.text}</span>
           </div>
         ))}
       </div>
+      <style jsx>{`
+        .scrolling-content {
+          display: flex;
+          animation: scroll 10s linear infinite;
+        }
+        @keyframes scroll {
+          0% {
+            transform: translateX(0);
+          }
+          100% {
+            transform: translateX(-100%);
+          }
+        }
+        @media (max-width: 768px) {
+          .scrolling-content {
+            animation: scroll 15s linear infinite; /* Slower for smaller screens */
+          }
+        }
+      `}</style>
     </div>
   );
 };
