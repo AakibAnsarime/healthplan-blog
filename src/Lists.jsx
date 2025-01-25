@@ -56,7 +56,7 @@ const Lists = () => {
         setHideOriginalButtons(true); // Hide original buttons after third click
         setShowSubPage(true);
         const subpageToNavigate = subpages[index]; // Dynamically select the subpage based on the index
-        navigate(`/lists/${subpageToNavigate}`); // Navigate to the selected subpage route
+        navigate(`/lists/${subpageToNavigate}/`); // Navigate to the selected subpage route
       }
     }, 5000); // Simulate a 1-second delay for "Waiting..." state
   };
