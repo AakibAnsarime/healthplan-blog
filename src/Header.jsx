@@ -40,21 +40,30 @@ function App() {
             <FaInstagram />
           </a>
         </div>
-        <i onClick={() => setIsMenuOpen(!isMenuOpen)} className='bx bx-menu xl:hidden block text-5xl cursor-pointer'><FaBars /></i>
-        <div className={`absolute xl:hidden top-24 left-0 w-full bg-white flex flex-col items-center gap-6 font-semibold text-lg transform transition-transform ${isMenuOpen ? "opacity-100" : "opacity-0"}`}>
-          <li className='list-none w-full text-center p-4 hover:bg-green-400 hover:text-white transition-all cursor-pointer'>
-          <Link to="/category/Health/">Health</Link>
-          </li>
-          <li className='list-none w-full text-center p-4 hover:bg-green-400 hover:text-white transition-all cursor-pointer'>
-          <Link to="/category/Fitness/">Fitness</Link>
-          </li>
-          <li className='list-none w-full text-center p-4 hover:bg-green-400 hover:text-white transition-all cursor-pointer'>
-          <Link to="/about-us/">About Us</Link>
-          </li>
-          <li className='list-none w-full text-center p-4 hover:bg-green-400 hover:text-white transition-all cursor-pointer'>
-          <Link to="/contact-us/">Contact Us</Link>
-          </li>
-        </div>
+        <i
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          className={`bx bx-menu xl:hidden block text-5xl cursor-pointer ${isMenuOpen ? 'pointer-events-none' : ''}`}
+        >
+          <FaBars />
+        </i>
+
+        <div
+  className={`absolute xl:hidden top-24 left-0 w-full bg-white flex flex-col items-center gap-6 font-semibold text-lg transition-all transform ${isMenuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10 pointer-events-none"}`}
+>
+  <li className='list-none w-full text-center p-4 hover:bg-green-400 hover:text-white transition-all cursor-pointer'>
+    <Link to="/category/Health/">Health</Link>
+  </li>
+  <li className='list-none w-full text-center p-4 hover:bg-green-400 hover:text-white transition-all cursor-pointer'>
+    <Link to="/category/Fitness/">Fitness</Link>
+  </li>
+  <li className='list-none w-full text-center p-4 hover:bg-green-400 hover:text-white transition-all cursor-pointer'>
+    <Link to="/about-us/">About Us</Link>
+  </li>
+  <li className='list-none w-full text-center p-4 hover:bg-green-400 hover:text-white transition-all cursor-pointer'>
+    <Link to="/contact-us/">Contact Us</Link>
+  </li>
+</div>
+
       </header>
   )
 }
