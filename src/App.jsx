@@ -29,7 +29,6 @@ const App = () => {
           <meta property="og:url" content="https://www.myhealthplanblog.com" />
           <meta property="og:type" content="website" />
           <meta property="og:image" content="https://www.myhealthplanblog.com/logo.png" />
-          <meta name="bb62b1f7f41519a46b6508579145844478784bc6" content="bb62b1f7f41519a46b6508579145844478784bc6" />
           <script type="application/ld+json">
             {`
               {
