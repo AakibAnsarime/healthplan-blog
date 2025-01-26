@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 import AuthorSection from './AuthorSection';
 import { LoadingScreen } from './LoadingScreen';
 import authorImage from './assets/author.jpg';
@@ -47,6 +48,10 @@ const PostPage = () => {
 
   return (
     <div className="container mx-auto px-4 md:px-8 py-4 md:py-8">
+      <Helmet>
+        <title>{post.heading} - Healthblog</title>
+        <meta name="description" content={post.summary} />
+      </Helmet>
       <div className="bg-white rounded-lg shadow-md overflow-hidden">
         <div className="relative w-full h-[200px] sm:h-[300px] md:h-[400px] lg:h-[500px]">
           <img

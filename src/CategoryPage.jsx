@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
 
 const CategoryPage = () => {
   const { category } = useParams();
@@ -37,6 +38,10 @@ const CategoryPage = () => {
 
   return (
     <div className="container mx-auto px-8 py-16">
+      <Helmet>
+        <title>{category} - Healthblog</title>
+        <meta name="description" content={`Explore articles in the ${category} category on Healthblog.`} />
+      </Helmet>
       <h2 className="text-4xl font-bold mb-8">{category}</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
         {currentArticles.map((article, index) => (
