@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Header from './Header';
@@ -15,8 +15,12 @@ import TermsAndConditions from './TermsAndConditions';
 import PrivacyPolicy from './PrivacyPolicy';
 import { TestimonialSlider } from './TestimonialSlider';
 import Lists from './Lists';
+import { initializeAnalytics, trackPageView } from "./utils/analytics";
 
 const App = () => {
+  useEffect(() => {
+    initializeAnalytics(); // Initialize Analytics once when the app loads
+  }, []);
   return (
     <Router>
       <div>
@@ -72,6 +76,16 @@ const App = () => {
       </div>
     </Router>
   );
+};
+// Component to track route changes
+const PageTracker = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    trackPageView(location.pathname); // Track page views on route change
+  }, [location]);
+
+  return null;
 };
 
 export default App;
