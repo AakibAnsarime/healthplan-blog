@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import Header from './Header';
@@ -18,9 +18,22 @@ import Lists from './Lists';
 import { initializeAnalytics, trackPageView } from "./utils/analytics";
 
 const App = () => {
+  const adRef = useRef(null);
+
   useEffect(() => {
     initializeAnalytics(); // Initialize Analytics once when the app loads
+    // Check if the script is already present
+    const existingScript = document.querySelector('script[src="//forsakenburn.com/b.XWVxscdoGQlt0/YQWfdbi/YdWK5-u/ZKXSIT/XeQmF9tujZfUelMk/PXTwYdwrNuD/gRz/NizpYftZNkjQAM0qOwDMMe3/N/wI"]');
+    if (!existingScript) {
+      const script = document.createElement('script');
+      script.src = "//forsakenburn.com/b.XWVxscdoGQlt0/YQWfdbi/YdWK5-u/ZKXSIT/XeQmF9tujZfUelMk/PXTwYdwrNuD/gRz/NizpYftZNkjQAM0qOwDMMe3/N/wI";
+      script.async = true;
+      script.referrerPolicy = 'no-referrer-when-downgrade';
+      adRef.current.innerHTML = ''; // Clear any existing content
+      adRef.current.appendChild(script); // Append the script to the ad section
+    }
   }, []);
+
   return (
     <Router>
       <div>
@@ -59,6 +72,10 @@ const App = () => {
             <>
               <Hero />
               <ScrollingSection />
+              {/* Ads Section */}
+          <div ref={adRef} style={{ width: '300px', height: '250px', margin: '20px auto', backgroundColor: '#f0f0f0' }}>
+            {/* Placeholder removed */}
+          </div>
               <BlogSection />
               <TestimonialSlider />
             </>
